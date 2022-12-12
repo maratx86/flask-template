@@ -1,0 +1,242 @@
+html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    background: #BFDDE0;
+    align-items: center;
+}
+
+body.repeat-logo {
+    background-image: url("/static/img/logo.svg");
+    background-size: 150px;
+    background-repeat: revert-layer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 250px;
+    min-height: 100px;
+    background: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    padding: 25px 25px 0 25px;
+    height: max-content;
+}
+
+.auth-container-title {
+    text-align: center;
+    font-size: 25px;
+}
+
+.auth-container-error {
+    display: flex;
+    border-radius: 5px;
+    background: #ffa2a2;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.auth-container-warning {
+    display: flex;
+    border-radius: 5px;
+    background: RGBA(255, 255, 0, 0.55);
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.auth-container-notification {
+    display: flex;
+    border-radius: 5px;
+    background: #c1c1c1;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.auth-container-notif-img-cont {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.auth-container-notif-img {
+    max-width: 35px;
+}
+
+.auth-container-notif-text-cont {
+
+}
+
+.auth-pre-container-data {
+    position: relative;
+    display: flex;
+    margin: 0 0 10px 0;
+}
+
+.auth-container-data {
+    position: relative;
+    width: 100%;
+}
+
+.auth-container-data-input {
+    height: 40px;
+
+    width: 100%;
+    height: 36px;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    font-family: "SB Sans Interface Regular", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    border: 1px solid #E2E4E8;
+        border-top-color: rgb(226, 228, 232);
+        border-right-color: rgb(226, 228, 232);
+        border-bottom-color: rgb(226, 228, 232);
+        border-left-color: rgb(226, 228, 232);
+    border-radius: 8px;
+    letter-spacing: normal;
+}
+
+.auth-container-data-label {
+
+}
+
+.auth-container-data-error {
+    float: left;
+    margin-bottom: 2px;
+    color: #FF4A50;
+    font-size: 12px;
+
+    margin-top: 6px;
+}
+
+.auth-container-splitter {
+    background: #969696;
+    padding: 1px;
+    border-radius: 1px;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.auth-password-eye {
+    position: absolute;
+    width: 22px;
+    height: 19px;
+    top: 11px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.auth-password-eye:hover {
+    filter: invert(78%) sepia(69%) saturate(452%) hue-rotate(84deg) brightness(98%) contrast(87%);
+}
+
+.auth-submit-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.auth-a-button {
+    margin-top: 12px;
+    padding: 8px 12px;
+    color: #212121;
+    background-color: #44EB99;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    opacity: 1;
+    cursor: pointer;
+    outline: none;
+    font-family: 'SB Sans Interface Regular', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.auth-button {
+    margin: 12px auto 0;
+    min-width: 190px;
+
+    padding: 8px 12px;
+    width: max-content;
+    height: 36px;
+    color: #212121;
+    background-color: #44EB99;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    opacity: 1;
+    cursor: pointer;
+    outline: none;
+    font-family: 'SB Sans Interface Regular', sans-serif;
+    font-size: 14px;
+}
+
+.auth-button:disabled {
+    border: none;
+}
+
+.auth-button-2:disabled {
+    color: #AEBBCA;
+    background-color: #C5F7DE;
+}
+
+.auth-button-2:disabled:hover {
+    background-color: #C5F7DE;
+}
+
+.auth-a-button:hover,
+.auth-button-2:enabled:hover {
+    background: #3DE391;
+    background-color: rgb(61, 227, 145);
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.14),0px 2px 2px rgba(0,0,0,0.12),0px 1px 3px rgba(0,0,0,0.2);
+}
+
+.restore-password-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+    align-items: center;
+    justify-content: center;
+    margin: 24px auto 10px;
+}
+
+.restore-password-link {
+    color: #AEBBCA;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+
+    cursor: pointer;
+    user-select: none;
+    color: #000;
+    text-decoration: none;
+}
+
+.restore-password-link:visited {
+    color: #AEBBCA;
+}
+
+.auth-submit-button-margin {
+
+}
+
+.container form {
+    width: 85%;
+}
+

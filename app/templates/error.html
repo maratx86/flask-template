@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+<section class="banner-area">
+    <div class="container">
+        <div class="row fullscreen align-items-center justify-content-between">
+            <div class="col-lg-6 col-md-6 banner-left">
+                <span>
+                {% if view and view.error_title %}<h1>{{ view.error_title }}</h1>{% else %}<h1>{{ _('Error Occurs')}}</h1>{% endif %}
+                </span>
+                {% if view %}
+                    <p>{{ view.message }}</p>
+                    {%  if view.report_link %}
+                    <a href="{{ view.report_link }}" class="primary-btn text-uppercase">{{ 'send report' }}</a>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{%  endblock %}

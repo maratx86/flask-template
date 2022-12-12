@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ g.locale }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ Title }}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth/base.css') }}">
+
+    <script type="application/javascript" src="{{ url_for('static', filename='js/utils.js') }}"></script>
+    <script type="application/javascript" src="{{ url_for('static', filename='js/auth/base.js') }}"></script>
+    {% block head %}{% endblock %}
+    {% block styles %}{% endblock %}
+</head>
+<body class="repeat-logo">
+    <div class="container">
+        <div class="auth-container-title">
+            {{ auth_type }}
+        </div>
+        {% if error_message %}
+            <div class="auth-container-error">
+                <div class="auth-container-notif-img-cont">
+                    <img class="auth-container-notif-img"
+                            src="{{ url_for('static', filename='img/sign-error.svg') }}"/>
+                </div>
+                <div class="auth-container-notif-text-cont">{{ error_message }}</div>
+            </div>
+        {% elif warning_message %}
+            <div class="auth-container-warning">
+                <div class="auth-container-notif-img-cont">
+                    <img class="auth-container-notif-img"
+                            src="{{ url_for('static', filename='img/sign-warning.svg') }}"/>
+                </div>
+                <div class="auth-container-notif-text-cont">{{ warning_message }}</div>
+            </div>
+        {% elif notification_message %}
+            <div class="auth-container-notification">
+                <div class="auth-container-notif-img-cont">
+                    <img class="auth-container-notif-img"
+                            src="{{ url_for('static', filename='img/sign-notification.svg') }}"/>
+                </div>
+                <div class="auth-container-notif-text-cont">{{ notification_message }}</div>
+            </div>
+        {% endif %}
+        <div class="auth-container-splitter"
+            style="width: 50%"></div>
+        {% block container %}
+        {% endblock %}
+    </div>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

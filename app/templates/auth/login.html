@@ -1,0 +1,54 @@
+{% set Title = 'Log In Page' %}
+{% set auth_type = 'Log In' %}
+
+{% extends 'auth/base.html' %}
+
+{% block head %}
+    <script type="application/javascript" src="{{ url_for('static', filename='js/auth/login.js') }}"></script>
+{% endblock %}
+
+{% block container %}
+    <form method="post">
+        {{ form.csrf_token }}
+        <div class="auth-pre-container-data">
+            <div class="auth-container-data">
+                {{ form.email(placeholder='E-mail', autocomplete='mail', class='auth-container-data-input') }}
+                <span class="auth-container-data-error">
+                    {% if form.email.errors %}
+                    {% for error in form.email.errors %}
+                        {{ error }}
+                    {% endfor %}
+                    {% endif %}
+                </span>
+            </div>
+        </div>
+        <div class="auth-pre-container-data">
+            <div class="auth-container-data">
+                {{ form.password(placeholder='Password', autocomplete='current-password', class='auth-container-data-input') }}
+                <span class="auth-container-data-error">
+                    {% if form.password.errors %}
+                    {% for error in form.password.errors %}
+                        {{ error }}
+                    {% endfor %}
+                    {% endif %}
+                </span>
+                <span class="auth-password-eye">
+                    <img alt="password-eye" src="{{ url_for('static', filename='img/eye-closed.svg') }}">
+                </span>
+            </div>
+        </div>
+        <br>
+        <div class="auth-submit-button">
+            <div class="auth-submit-button-margin">
+
+            </div>
+            <button type="submit" class="auth-button auth-button-2">{{ 'Sign In' }}</button>
+            <a href='/auth/reg/' class="auth-a-button">{{ 'Sign Up' }}</a>
+        </div>
+        <div class="restore-password-container">
+            <div class="restore-password">
+                <a class="restore-password-link" href="/auth/reset/">{{ 'Forgot password' }}</a>
+            </div>
+        </div>
+    </form>
+{% endblock %}

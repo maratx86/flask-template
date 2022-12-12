@@ -1,0 +1,21 @@
+{% set Title = _('Log Out Page') %}
+{% set auth_type = _('Log Out') %}
+
+{% extends 'auth/base.html' %}
+
+{% block head %}
+    <script type="application/javascript" src="{{ url_for('static', filename='js/auth/login.js') }}"></script>
+{% endblock %}
+
+{% block container %}
+    <form method="post">
+        <div class="auth-submit-button">
+            <div class="auth-submit-button-margin">
+
+            </div>
+            <a href='/auth/login/' class="auth-a-button">{{_('Sign In')}}</a>
+        </div>
+        <div class="restore-password-container">
+        </div>
+    </form>
+{% endblock %}
